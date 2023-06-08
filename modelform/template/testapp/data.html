@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+  <div class="tab">
+
+ <form  method="post">
+  <h2>Student Record</h2>
+  <table border="10px">
+    <tr>
+      <td>Name</td>
+      <td>Rollno</td>
+      <td>Marks</td>
+
+    </tr>
+
+      {% for i in form %}
+    <tr>
+      <td>{{i.name}}</td>
+      <td>{{i.rollno}}</td>
+      <td>{{i.marks}}</td>
+    </tr>
+    {% endfor%}
+
+   </table>
+  </form>
+ </div>
+
+</body>
+</html>

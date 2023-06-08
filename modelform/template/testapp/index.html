@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+{% extends 'testapp/home.html' %}
+
+{% block divblock%}
+
+
+ <form  method="post">
+  <h1>Student Form</h1>
+  {{form.as_p}}
+  {% csrf_token %}
+  <input id="btn2"  type="submit" name="" value="Register">
+ </form>
+
+
+{% endblock%}
